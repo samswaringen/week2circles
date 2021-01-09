@@ -1,0 +1,115 @@
+<div id="ball" style="
+  z-index:5;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:green"></div>
+
+<div id="ball2" style="
+z-index:5;
+position:absolute;
+left:100px;
+top:100px;
+width:50px;
+height:50px;
+border-radius:50%;
+background:rgb(28, 0, 128)"></div>
+
+<div id="ball3" style="
+  z-index:5;
+  position:absolute;
+  left:30px;
+  top:300px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:rgba(128, 0, 17, 0.61)"></div>
+
+<script>
+
+var velocityX = 5;
+var velocityY = 3;
+var positionX = 0;
+var positionY = 0;
+var velocityX2 = 5;
+var velocityY2 = 3;
+var positionX2 = 100;
+var positionY2 = 100;
+var velocityX3 = 5;
+var velocityY3 = 3;
+var positionX3 = 30;
+var positionY3 = 300;
+var ball = document.getElementById('ball');
+
+// YOUR CODE 
+function moveBall(){
+  if(positionX + 25 > 500 || positionX + 25< 25){
+    velocityX = -velocityX;
+    ball.style.background = 'blue';
+    ball.style.height = '100px';
+    ball.style.width = '100px';
+  }
+  if(positionY + 25 > 500 || positionY + 25< 25){
+    velocityY = -velocityY;
+    ball.style.background = 'red';
+    ball.style.height = '25px';
+    ball.style.width = '25px';
+  }
+  positionX = positionX + velocityX;
+  positionY = positionY + velocityY;
+  ball.style.left = positionX +'px';
+  ball.style.top = positionY + 'px';
+
+}
+setInterval(moveBall, 20);
+
+var ball2 = document.getElementById('ball2');
+
+function moveBall2(){
+  if(positionX2 + 25 > 500 || positionX2 + 25< 25){
+    velocityX2 = -velocityX2;
+    ball2.style.background = 'aqua';
+    ball2.style.height = '100px';
+    ball2.style.width = '100px';
+  }
+  if(positionY2 + 25 > 500 || positionY2 + 25< 25){
+    velocityY2 = -velocityY2;
+    ball2.style.background = 'orange';
+    ball2.style.height = '50px';
+    ball2.style.width = '50px';
+  }
+  positionX2 = positionX2 + velocityX2;
+  positionY2 = positionY2 + velocityY2;
+  ball2.style.left = positionX2 +'px';
+  ball2.style.top = positionY2 + 'px';
+
+}
+setInterval(moveBall2, 25);
+
+var ball3 = document.getElementById('ball3');
+
+function moveBall3(){
+  if(positionX3 + 25 > 500 || positionX3 + 25< 25){
+    velocityX3 = -velocityX3;
+    ball3.style.background = 'purple';
+    ball3.style.height = '100px';
+    ball3.style.width = '100px';
+  }
+  if(positionY3 + 25 > 500 || positionY3 + 25< 25){
+    velocityY3 = -velocityY3;
+    ball3.style.background = 'green';
+    ball3.style.height = '75px';
+    ball3.style.width = '75px';
+  }
+  positionX3 = positionX3 + velocityX3;
+  positionY3 = positionY3 + velocityY3;
+  ball3.style.left = positionX3 +'px';
+  ball3.style.top = positionY3 + 'px';
+}
+
+  setInterval(moveBall3, 30);
+// ----------------
+</script>
