@@ -43,20 +43,28 @@ var velocityY3 = 3;
 var positionX3 = 30;
 var positionY3 = 300;
 var ball = document.getElementById('ball');
+var edgeWidth = parseInt(ball.style.width, 10);
+var colors = ['red','blue','purple','green','yellow','orange'];
+var sizes = ['25px','50px','75px','100px','125px','150px'];
+
 
 // YOUR CODE 
 function moveBall(){
-  if(positionX + 25 > 500 || positionX + 25< 25){
+  if((positionX + edgeWidth) > 500 || (positionX + edgeWidth) < edgeWidth){
     velocityX = -velocityX;
-    ball.style.background = 'blue';
-    ball.style.height = '100px';
-    ball.style.width = '100px';
+    let color = colors[Math.floor(Math.random() * colors.length)];
+    let size = sizes[Math.floor(Math.random() * sizes.length)];
+    ball.style.background = color;
+    ball.style.height = size;
+    ball.style.width = size;
   }
-  if(positionY + 25 > 500 || positionY + 25< 25){
+  if(positionY + edgeWidth > 500 || positionY + edgeWidth < edgeWidth){
     velocityY = -velocityY;
-    ball.style.background = 'red';
-    ball.style.height = '25px';
-    ball.style.width = '25px';
+    let color = colors[Math.floor(Math.random() * colors.length)];
+    let size = sizes[Math.floor(Math.random() * sizes.length)];
+    ball.style.background = color;
+    ball.style.height = size;
+    ball.style.width = size;
   }
   positionX = positionX + velocityX;
   positionY = positionY + velocityY;
@@ -67,19 +75,24 @@ function moveBall(){
 setInterval(moveBall, 20);
 
 var ball2 = document.getElementById('ball2');
+var edgeWidth2 = parseInt(ball2.style.width, 10);
 
 function moveBall2(){
-  if(positionX2 + 25 > 500 || positionX2 + 25< 25){
+  if(positionX2 + edgeWidth2 > 500 || positionX2 + edgeWidth2< edgeWidth2){
     velocityX2 = -velocityX2;
-    ball2.style.background = 'aqua';
-    ball2.style.height = '100px';
-    ball2.style.width = '100px';
+    let color = colors[Math.floor(Math.random() * colors.length)];
+    let size = sizes[Math.floor(Math.random() * sizes.length)];
+    ball2.style.background = color;
+    ball2.style.height = size;
+    ball2.style.width = size;
   }
-  if(positionY2 + 25 > 500 || positionY2 + 25< 25){
+  if(positionY2 + edgeWidth2 > 500 || positionY2 + edgeWidth2< edgeWidth2){
     velocityY2 = -velocityY2;
-    ball2.style.background = 'orange';
-    ball2.style.height = '50px';
-    ball2.style.width = '50px';
+    let color = colors[Math.floor(Math.random() * colors.length)];
+    let size = sizes[Math.floor(Math.random() * sizes.length)];
+    ball2.style.background = color;
+    ball2.style.height = size;
+    ball2.style.width = size;
   }
   positionX2 = positionX2 + velocityX2;
   positionY2 = positionY2 + velocityY2;
@@ -90,19 +103,24 @@ function moveBall2(){
 setInterval(moveBall2, 25);
 
 var ball3 = document.getElementById('ball3');
+var edgeWidth3 = parseInt(ball3.style.width, 10);
 
 function moveBall3(){
-  if(positionX3 + 25 > 500 || positionX3 + 25< 25){
+  if(positionX3 + edgeWidth3 > 500 || positionX3 + edgeWidth3< edgeWidth3){
     velocityX3 = -velocityX3;
-    ball3.style.background = 'purple';
-    ball3.style.height = '100px';
-    ball3.style.width = '100px';
+    let color = colors[Math.floor(Math.random() * colors.length)];
+    let size = sizes[Math.floor(Math.random() * sizes.length)];
+    ball3.style.background = color;
+    ball3.style.height = size;
+    ball3.style.width = size;
   }
-  if(positionY3 + 25 > 500 || positionY3 + 25< 25){
+  if(positionY3 + edgeWidth3 > 500 || positionY3 + edgeWidth3< edgeWidth3){
     velocityY3 = -velocityY3;
-    ball3.style.background = 'green';
-    ball3.style.height = '75px';
-    ball3.style.width = '75px';
+    let color = colors[Math.floor(Math.random() * colors.length)];
+    let size = sizes[Math.floor(Math.random() * sizes.length)];
+    ball3.style.background = color;
+    ball3.style.height = size;
+    ball3.style.width = size;
   }
   positionX3 = positionX3 + velocityX3;
   positionY3 = positionY3 + velocityY3;
